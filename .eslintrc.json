@@ -1,14 +1,13 @@
-module.exports = {
-  env: {
-    browser: true,
-    node: true,
+{
+  "env": {
+    "node": true,
+    "jest": true,
+    "es2021": true
   },
-  languageOptions: {
-    parserOptions: {
-      ecmaVersion: 2021,
-    },
-  },
-  rules: {
-    // your rules here
-  },
-};
+  "extends": "eslint:recommended",
+  "plugins": ["jest", "node"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "off"
+  }
+}
