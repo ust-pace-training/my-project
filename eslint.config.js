@@ -1,20 +1,16 @@
-import nodePlugin from "eslint-plugin-node";
-import jestPlugin from "eslint-plugin-jest";
-
+// eslint.config.js
 export default [
   {
-    plugins: {
-      node: nodePlugin,
-      jest: jestPlugin,
-    },
-    rules: {
-      // custom rules here
-    },
     languageOptions: {
       env: {
         node: true,
-        jest: true,
+        es2021: true,
+        jest: true, // for test globals like "test" and "expect"
       },
+    },
+    rules: {
+      "no-unused-vars": "warn",
+      "no-console": "off",
     },
   },
 ];

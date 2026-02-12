@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint -c .eslintrc.json .",
-    "test": "jest",
-    "coverage": "nyc npm test"
-  },
+  "lint": "eslint .",
+  "test": "jest",
+  "coverage": "nyc npm test"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
