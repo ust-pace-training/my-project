@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "jest",
-    "coverage": "nyc npm test"
+    "coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
