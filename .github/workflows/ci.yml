@@ -26,12 +26,20 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'npm'          # cache node_modules for speed
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Verify Node and npm versions
+        run: |
+          node -v
+          npm -v
+
+      - name: Clean install dependencies
+        run: npm ci             # ensures exact versions from package-lock.json
 
       - name: Lint
         run: npm run lint
+        env:
+          CI: true              # some eslint plugins behave better in CI
 
       - name: Run tests
         run: npm test
