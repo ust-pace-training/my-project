@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "test": "jest",
-  "lint": "eslint .",
-  "test:coverage": "jest --coverage"
-},
+    "lint": "eslint -c .eslintrc.json .",
+    "test": "jest",
+    "coverage": "nyc npm test"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "eslint": "^10.0.0",
+    "eslint-plugin-jest": "^29.13.0",
+    "eslint-plugin-node": "^11.1.0",
     "jest": "^30.2.0"
   }
 }
